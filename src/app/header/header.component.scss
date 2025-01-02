@@ -1,0 +1,18 @@
+nav {
+  height: 100px;
+  ul {
+    gap: 20px;
+    li {
+      a{
+        font-size: 13px;
+        letter-spacing: normal;
+        line-height: 16.9px;
+        color: #ccd6f6;
+        transition: 0.3s ease;
+        :hover {
+          color: #64ffda;
+        }
+      }
+    }
+  }
+}
