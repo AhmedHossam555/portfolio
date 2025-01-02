@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+$main-color: #64ffda;
+$secod-color: #0a192f;
+body {
+  min-height: 100vh;
+  background-color: $secod-color;
+}
+.page {
+  padding-left:  50px;
+  padding-right: 50px;
+}
+.main-text {
+  color: $main-color;
+}
