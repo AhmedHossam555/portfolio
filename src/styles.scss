@@ -2,10 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 $main-color: #64ffda;
 $secod-color: #0a192f;
+* {
+  box-sizing: border-box;
+}
 body {
   min-height: 100vh;
   background-color: $secod-color;
   font-family: "Inter", serif;
+}
+a {
+  text-decoration: none;
 }
 .page {
   padding-left:  50px;

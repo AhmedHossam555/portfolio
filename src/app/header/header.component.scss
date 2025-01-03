@@ -4,15 +4,38 @@ nav {
     gap: 20px;
     li {
       a{
+        padding: 10px 20px;
         font-size: 13px;
         letter-spacing: normal;
         line-height: 16.9px;
         color: #ccd6f6;
         transition: 0.3s ease;
-        :hover {
+        &:hover {
           color: #64ffda;
         }
+        span {
+          padding: 10px 12px;
+        }
       }
+    }
+  }
+  .resume {
+    a{
+      color: rgb(100, 255, 218) !important;
+    }
+    background-color: transparent;
+    border: 1px solid rgb(100, 255, 218);
+    border-radius: 3px;
+    padding: 0.75rem 1rem;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    margin-left: 10px;
+    font-size: 13px;
+    &:hover {
+     background-color: rgba(100, 255, 218, 0.07);  
     }
   }
 }

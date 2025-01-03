@@ -1,0 +1,122 @@
+.home {
+  padding-top: 40px;
+  font-family:  Calibri, 'Trebuchet MS', sans-serif;
+  h1 {
+    font-size: 16px;
+    color: #64ffda;
+    line-height: 20.8px;
+    text-align: start;
+    margin-bottom: 20px;
+    letter-spacing: normal;
+  }
+  h2 {
+    font-size: 80px;
+    text-align: start;
+    line-height: 88px;
+    letter-spacing: normal;
+    color: #ccd6f6;
+  }
+  h3 {
+    font-size: 80px;
+    text-align: start;
+    line-height: 88px;
+    color: #8892b0;
+    margin-bottom: 35px;
+  }
+  p {
+    font-size: 16px;
+    color: #8892b0;
+    line-height: 26px;
+    text-align: start;
+    margin-bottom: 15px;
+    max-width: 500px;
+  }
+  .touch a{
+    color: rgb(100, 255, 218);
+    background-color: transparent;
+    border: 1px solid rgb(100, 255, 218);
+    border-radius: 3px;
+    padding: 1.25rem 1.75rem;
+    font-size: 14px;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    margin-top: 50px;
+    display: inline-block;
+  }
+
+}
+.media {
+  left: 50px;
+  bottom: 90px;
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    width: 60px;
+    height: 60px;
+    a {
+      transition: all 0.3s ease;
+    }
+    &:hover a {
+      margin-top: -10px;
+    }
+  }
+  li:last-child {
+    margin-bottom: 20px;
+  }
+  img {
+    width: 25px;
+    height: 25px;
+    color:#64ffda
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: rgb(168, 178, 209);
+    bottom: -110px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.email {
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  a {
+    font-family:'Courier New', Courier, monospace;
+    letter-spacing: 0.1em;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    margin: 20px auto;
+    display: inline-block;
+    position: fixed;
+    transition:all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    bottom: 110px;
+    &:hover {
+      bottom: 115px;
+    }
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: rgb(168, 178, 209);
+    z-index: 55;
+    bottom: -210px;
+  }
+}
