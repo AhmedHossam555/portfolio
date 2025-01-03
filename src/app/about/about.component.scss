@@ -1,0 +1,27 @@
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1 {
+  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 10px 0px 40px;
+  width: 100%;
+  white-space: nowrap;
+  font-size: 30px;
+  line-height: 26px;
+  position: relative;
+  font-weight: 600;
+  color: rgb(204, 214, 246);
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 300px;
+    background-color: rgb(48, 60, 85);
+    position: absolute;
+    top: 16px;
+    left: 200px;
+  }
+}
