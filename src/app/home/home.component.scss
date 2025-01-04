@@ -123,3 +123,14 @@
     bottom: -210px;
   }
 }
+
+@media (max-width: 992px) {
+  .media {
+    left: 30px !important;
+  }
+}
+@media (max-width: 768px) {
+  .media {
+  display: none !important;
+  }
+}

@@ -39,3 +39,124 @@ nav {
     }
   }
 }
+.toggle {
+  display: none;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+  span {
+    position: absolute;
+    display: block;
+    height: 2px;
+    background-color: #64ffda;
+    right: 0;
+    transition: all 0.3s ease;
+  }
+  span:first-child {
+    top: 0;
+    width: 120%;
+  }
+  span:nth-child(2) {
+    top: 12px;
+    width: 100%;
+  }
+  span:last-child {
+    top: 22px;
+    width: 80%;
+  }
+  transition: all 0.3s ease;
+}
+.toggle.active {
+  overflow: hidden;
+  span:first-child {
+    top: 0;
+    width: 100%;
+    transform: rotate(45deg);
+    transform-origin: top left;
+
+  }
+  span:nth-child(2) {
+    width: 0;
+    opacity: 0;
+  }
+  span:last-child {
+    top: 22px;
+    width: 100%;
+    transform-origin: bottom left;
+    transform: rotate(-45deg);
+  }
+}
+@media (max-width: 992px) {
+  ul {
+    gap: 10px !important;
+  }
+}
+@media (max-width: 768px) {
+  .links {
+  display: none !important;
+  }
+  .toggle {
+    display: block !important;
+  }
+  aside {
+    display: block !important;
+  }
+
+}
+aside {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  background-color: rgb(23, 42, 69);
+  padding: 50px;
+  width: 50vw;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  margin-left: auto;
+  box-shadow: rgba(2, 12, 27, 0.7) -10px 0px 30px -15px;
+  transition: all 0.3s ease;
+  ul {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+    li {
+      margin: 0px auto 20px;
+    }
+   li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px !important;
+   }
+   .resume {
+    color: rgb(100, 255, 218);
+    background-color: transparent;
+    border: 1px solid rgb(100, 255, 218);
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 18px 50px;
+    margin: 10% auto 0px;
+    width: max-content;
+    &:hover {
+      background-color: rgba(100, 255, 218, 0.07);  
+    }     
+
+   }
+  
+  }
+}
+aside.hidden {
+  right: -400px;
+}
+  

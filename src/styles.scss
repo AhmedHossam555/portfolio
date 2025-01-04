@@ -5,10 +5,17 @@ $secod-color: #0a192f;
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   min-height: 100vh;
   background-color: $secod-color;
   font-family: "Inter", serif;
+}
+body.layer {
+  max-height: 100vh !important;
+  overflow: hidden !important;
 }
 a {
   text-decoration: none;
