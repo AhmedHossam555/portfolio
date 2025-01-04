@@ -1,0 +1,42 @@
+.contact {
+  font-family: monospace;
+  h3 {
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 10px 0px 20px;
+    width: 100%;
+    white-space: nowrap;
+    display: block;
+    color: rgb(100, 255, 218);
+    font-size: 16px;
+    font-weight: normal;
+    -webkit-box-pack: center;
+  
+    }
+  
+  h4 {
+    font-weight: 600;
+    color: rgb(204, 214, 246);
+    margin: 0px 0px 10px;
+  }
+  p {
+    padding: 150px 0px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0px 0px 15px;
+  }
+  a {
+    color: rgb(100, 255, 218);
+    background-color: transparent;
+    border: 1px solid rgb(100, 255, 218);
+    border-radius: 3px;
+    padding: 1.25rem 1.75rem;
+    font-size: 14px;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    margin-top: 50px;
+  }
+}
