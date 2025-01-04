@@ -48,3 +48,12 @@ a {
   opacity: 1;
   transform: translateY(0);
 }
+@media (min-width: 1201px) {
+  .page  {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  .home, .about ,.skills,.contact, .project{
+    padding-left: 1rem;
+  }
+}
