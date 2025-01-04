@@ -54,6 +54,7 @@
 .media {
   left: 50px;
   bottom: 90px;
+
   li {
     display: flex;
     justify-content: center;
@@ -123,14 +124,25 @@
     bottom: -210px;
   }
 }
+@media (max-width: 1200px) {
+.page  {
+  padding-left: 100px;
+  padding-right: 100px;
+}
 
-@media (max-width: 992px) {
-  .media {
-    left: 30px !important;
-  }
 }
 @media (max-width: 768px) {
-  .media {
+  .media,.email {
   display: none !important;
+  }
+  h2 {
+    white-space: nowrap;
+  }
+  h2, h3 {
+    font-size: 60px !important;
+  }
+  .page  {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

@@ -12,6 +12,7 @@ body {
   min-height: 100vh;
   background-color: $secod-color;
   font-family: "Inter", serif;
+  overflow-x: hidden;
 }
 body.layer {
   max-height: 100vh !important;
