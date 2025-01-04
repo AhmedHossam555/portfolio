@@ -28,3 +28,23 @@ a {
 .main-text {
   color: $main-color;
 }
+
+.hiddens {
+  opacity: 0;
+  transform: translateY(85px);
+  transition: all 0.6s ease ;
+}
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hid {
+  opacity: 0;
+  transform: translateY(-85px);
+  transition: all 0.6s ease-in-out ;
+}
+.show_hid {
+  opacity: 1;
+  transform: translateY(0);
+}
