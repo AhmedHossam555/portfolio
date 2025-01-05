@@ -146,3 +146,13 @@
     padding-right: 0;
   }
 }
+
+@media (max-width: 600px) {
+  h2 {
+    white-space: nowrap;
+  }
+  h2, h3 {
+    font-size: 50px !important;
+  }
+
+}
