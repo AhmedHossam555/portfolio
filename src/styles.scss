@@ -9,6 +9,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  margin: 0;
+  padding: 0;
   min-height: 100vh;
   background-color: $secod-color;
   font-family: "Inter", serif;
@@ -47,10 +49,9 @@ a {
   opacity: 1;
   transform: translateY(0);
 }
-@media (min-width: 1201px) {
-  .page  {
-    padding-left: 120px;
-    padding-right: 120px;
-  }
 
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 1140px !important;
+  }
 }
