@@ -1,44 +1,64 @@
+
+
+/* ==========================
+   NAVIGATION STYLES
+   ========================== */
+$main-color: #64ffda;
+$second-color: #0a192f;
 nav {
   height: 100px;
+
   ul {
     gap: 20px;
+
     li {
-      a{
+      a {
         padding: 10px 20px;
         font-size: 13px;
-        letter-spacing: normal;
         line-height: 16.9px;
+        letter-spacing: normal;
         color: #ccd6f6;
         transition: 0.3s ease;
+
         &:hover {
-          color: #64ffda;
+          color: $main-color;
         }
+
         span {
           padding: 10px 12px;
         }
       }
     }
   }
+
+  /* Resume Button (Desktop) */
   .resume {
-    a{
-      color: rgb(100, 255, 218) !important;
+    a {
+      color: $main-color !important;
     }
+
     background-color: transparent;
-    border: 1px solid rgb(100, 255, 218);
+    border: 1px solid $main-color;
     border-radius: 3px;
     padding: 0.75rem 1rem;
+    margin-left: 10px;
+    font-size: 13px;
+
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
     transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    margin-left: 10px;
-    font-size: 13px;
+
     &:hover {
-     background-color: rgba(100, 255, 218, 0.07);  
+      background-color: $main-color;
     }
   }
 }
+
+/* ==========================
+   TOGGLE (Hamburger Menu)
+   ========================== */
 .toggle {
   display: none;
   width: 30px;
@@ -46,78 +66,73 @@ nav {
   position: relative;
   z-index: 100;
   cursor: pointer;
+  transition: all 0.3s ease;
+
   span {
     position: absolute;
     display: block;
     height: 2px;
-    background-color: #64ffda;
+    background-color: $main-color;
     right: 0;
     transition: all 0.3s ease;
-  }
-  span:first-child {
-    top: 0;
-    width: 120%;
-  }
-  span:nth-child(2) {
-    top: 12px;
-    width: 100%;
-  }
-  span:last-child {
-    top: 22px;
-    width: 80%;
-  }
-  transition: all 0.3s ease;
-}
-.toggle.active {
-  overflow: hidden;
-  span:first-child {
-    top: 0;
-    width: 100%;
-    transform: rotate(45deg);
-    transform-origin: top left;
 
-  }
-  span:nth-child(2) {
-    width: 0;
-    opacity: 0;
-  }
-  span:last-child {
-    top: 22px;
-    width: 100%;
-    transform-origin: bottom left;
-    transform: rotate(-45deg);
-  }
-}
-@media (max-width: 992px) {
-  ul {
-    gap: 10px !important;
-  }
-}
-@media (max-width: 768px) {
-  .links {
-  display: none !important;
-  }
-  .toggle {
-    display: block !important;
-  }
-  aside {
-    display: block !important;
+    &:first-child {
+      top: 0;
+      width: 120%;
+    }
+
+    &:nth-child(2) {
+      top: 12px;
+      width: 100%;
+    }
+
+    &:last-child {
+      top: 22px;
+      width: 80%;
+    }
   }
 
+  &.active {
+    overflow: hidden;
+
+    span:first-child {
+      top: 0;
+      width: 100%;
+      transform: rotate(45deg);
+      transform-origin: top left;
+    }
+
+    span:nth-child(2) {
+      width: 0;
+      opacity: 0;
+    }
+
+    span:last-child {
+      top: 22px;
+      width: 100%;
+      transform: rotate(-45deg);
+      transform-origin: bottom left;
+    }
+  }
 }
+
+/* ==========================
+   SIDEBAR (Mobile Menu)
+   ========================== */
 aside {
   display: none;
   position: absolute;
-  z-index: 99;
-  background-color: rgb(23, 42, 69);
-  padding: 50px;
-  width: 50vw;
-  height: 100vh;
-  right: 0;
   top: 0;
+  right: 0;
+  z-index: 99;
+  height: 100vh;
+  padding: 50px;
   margin-left: auto;
+
+  background-color: #172a45;
   box-shadow: rgba(2, 12, 27, 0.7) -10px 0px 30px -15px;
   transition: all 0.3s ease;
+
   ul {
     display: flex;
     flex-direction: column !important;
@@ -125,48 +140,88 @@ aside {
     align-items: center;
     list-style: none;
     height: 100%;
-    li {
-      margin: 0px auto 20px;
-    }
-   li a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 18px !important;
-   }
-   .resume {
-    color: rgb(100, 255, 218);
-    background-color: transparent;
-    border: 1px solid rgb(100, 255, 218);
-    border-radius: 3px;
-    font-size: 14px;
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
-    line-height: 1;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    padding: 18px 50px;
-    margin: 10% auto 0px;
-    width: max-content;
-    &:hover {
-      background-color: rgba(100, 255, 218, 0.07);  
-    }     
 
-   }
-  
+    li {
+      margin: 0 auto 20px;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 18px !important;
+      }
+    }
+
+    /* Resume Button (Mobile) */
+    .resume {
+      color: $main-color;
+      background-color: transparent;
+      border: 1px solid $main-color;
+      border-radius: 3px;
+      padding: 18px 50px;
+      margin: 10% auto 0;
+      width: max-content;
+      font-size: 14px;
+
+      font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+      line-height: 1;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      &:hover {
+        background-color: #64ffda12;
+      }
+    }
+  }
+
+  &.hidden {
+    right: -400px;
   }
 }
-aside.hidden {
-  right: -400px;
-}
+
+/* ==========================
+   LOGO
+   ========================== */
 .logo {
-  width: 50px; 
-  height: 50px; 
-  border: 6px solid #64ffda;
+  width: 50px;
+  height: 50px;
+  border: 6px solid $main-color;
   font-size: 24px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
 }
 
+/* ==========================
+   MEDIA QUERIES
+   ========================== */
+@media (max-width: 992px) {
+  ul {
+    gap: 10px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none !important;
+  }
+
+  .toggle {
+    display: block !important;
+  }
+
+  aside {
+    display: block !important;
+  }
+}

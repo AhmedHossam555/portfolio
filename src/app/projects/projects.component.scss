@@ -1,58 +1,79 @@
+
+// Variables
+$primary-bg: #172a45;
+$text-main: #ccd6f6;
+$text-muted: rgb(204, 214, 246);
+$line-color: rgb(48, 60, 85);
+$transition: all 0.4s ease;
+
 h1 {
   position: relative;
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
-  margin: 10px 0px 80px;
+  margin: 0.6rem 0 5rem;
   width: 100%;
   white-space: nowrap;
-  font-size: 30px;
-  line-height: 26px;
-  position: relative;
+  font-size: 1.875rem; // 30px
+  line-height: 1.6rem;
   font-weight: 600;
-  color: rgb(204, 214, 246);
+  color: $text-muted;
   cursor: default;
+
   &::after {
     content: "";
-    display: block;
+    flex: 1; // makes line flexible
     height: 1px;
-    width: 300px;
-    background-color: rgb(48, 60, 85);
-    position: absolute;
-    top: 16px;
-    left: 200px;
+    margin-left: 2rem;
+    background-color: $line-color;
   }
 }
+
 .boxs {
   .box {
-    background-color: #172a45;
+    background-color: $primary-bg;
     overflow: hidden;
-    transition: all 0.4s ease;
+    border-radius: 8px;
+    transition: $transition;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
     img {
       width: 100%;
-      height: 220px;
+      height: 14rem; // ~220px
       object-fit: cover;
+      transition: transform 0.4s ease;
     }
+
     &:hover {
-      margin-top: -10px;
+      transform: translateY(-0.6rem) scale(1.02);
+
+      img {
+        transform: scale(1.05);
+      }
     }
+
     .section {
-      padding: 32px 25px;
+      padding: 2rem 1.5rem;
       display: flex;
       flex-direction: column;
+
       h2 {
-        color: #ccd6f6;
-        font-size: 22px;
-        line-height: 28.6px;
+        color: $text-main;
+        font-size: 1.375rem; // 22px
+        line-height: 1.8rem;
         margin-bottom: 1rem;
       }
+
       a {
-        font-size: 16px;
+        font-size: 1rem; // 16px
+        color: lighten($text-main, 10%);
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $text-muted;
+        }
       }
     }
-  
   }
 }
-.project {
-  margin-bottom: 300px;
-}
+
