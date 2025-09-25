@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { SkillsComponent } from "../skills/skills.component";
 
 @Component({
@@ -9,5 +9,5 @@ import { SkillsComponent } from "../skills/skills.component";
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
-
+   activities = signal(['Coding', 'Reading', 'Crafting', 'Problem Solving', 'Team Management']);
 }

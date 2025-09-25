@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal, WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
@@ -8,5 +8,23 @@ import { Component } from '@angular/core';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+
+    skills: WritableSignal<string[]> = signal([
+    'HTML',
+    'CSS',
+    'SCSS',
+    'Bootstrap',
+    'Tailwind CSS',
+    'JavaScript',
+    'TypeScript',
+    'jQuery',
+    'Angular (Angular 2+)',
+    'NgRx',
+    'RxJS',
+    'Karma',
+    'Git',
+    'Vercel',
+    'Figma',
+  ]);
 
 }

@@ -3,27 +3,27 @@
     <span class="me-3 main-text">02.</span>
     About Me
   </h1>
-  <div class="text hiddens" style="transition-delay: 500ms;" >
+
+  <div class="text hiddens" style="transition-delay: 500ms;">
     <p>
-      Hello! I'm Ahmed Hossam, from Cario.
+      Hello! I'm Ahmed Hossam, from Cairo.
     </p>
     <p>
-      I am a creative, punctual, and dedicated individual driven by goals and guided by strong moral values and ethics. With a high-energy attitude, excellent communication skills, strong organizational abilities, and meticulous attention to detail, I am committed to excelling in everything I do.
+      I am a creative, punctual, and dedicated individual driven by goals and guided by strong values. With a high-energy attitude, excellent communication skills, strong organizational abilities, and attention to detail, I strive to excel in everything I do.
     </p>
     <p>
-      Currently, I am pursuing a Bachelor’s degree in <span class="main-text">Computer Science at  BFCAI</span> (2021–2025), where I have maintained a commendable GPA of <span class="main-text">3.57</span> out of 4.
+      I hold a Bachelor’s degree in <span class="main-text">Computer Science from BFCAI</span> (2021–2025), where I graduated with a GPA of <span class="main-text">3.57</span> out of 4.
     </p>
     <p>
-      Here are a few of the other activities that I love to do!
+      Beyond academics and coding, here are a few activities I enjoy:
     </p>
   </div>
 
-  <ul class="list-unstyled main-text hiddens" style="transition-delay: 600ms;" >
-    <li>Coding</li>
-    <li>Reading</li>
-    <li>Crafting</li>
-    <li>Problem Solving</li>
-    <li>Team Management</li>
+  <ul class="list-unstyled main-text hiddens" style="transition-delay: 600ms;">
+    @for (activity of activities(); track $index) {
+      <li>{{ activity }}</li>
+    }
   </ul>
 </section>
+
 <app-skills></app-skills>
