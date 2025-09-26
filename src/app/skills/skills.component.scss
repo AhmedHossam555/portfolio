@@ -1,4 +1,3 @@
-
 h1 {
   font-size: 30px;
   line-height: 26px;
@@ -6,26 +5,27 @@ h1 {
   color: rgb(204, 214, 246);
   margin-bottom: 40px;
 }
+
 ul {
   li {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
-    cursor:default;
+    padding: 0.5rem 0 0.5rem 1rem;
     position: relative;
+    cursor: default;
     transition: all 0.3s ease;
+
     &::before {
       content: '';
       position: absolute;
-      left: 0;
-      border-width: 5px;
-      border-color: transparent  transparent transparent #64ffda;
-      border-style: solid;
       top: 50%;
+      left: 0;
+      border-style: solid;
+      border-width: 5px;
+      border-color: transparent transparent transparent #64ffda;
       transform: translateY(-50%);
     }
+
     &:hover {
       margin-left: 10px;
     }
   }
-}  
+}
